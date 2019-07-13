@@ -701,6 +701,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.rayboo.top/2019/06/06/微服务学习/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/rayboo/rayboo/master/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ray's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/06/微服务学习/" itemprop="url">微服务学习</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-06T11:00:00+08:00">
+                2019-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/SpringCloud/" itemprop="url" rel="index">
+                    <span itemprop="name">SpringCloud</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/06/微服务学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/06/微服务学习/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/06/06/微服务学习/" class="leancloud_visitors" data-flag-title="微服务学习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="一、微服务架构"><a href="#一、微服务架构" class="headerlink" title="一、微服务架构"></a>一、微服务架构</h2><h3 id="1、什么是微服务（Microservice）"><a href="#1、什么是微服务（Microservice）" class="headerlink" title="1、什么是微服务（Microservice）"></a>1、什么是微服务（Microservice）</h3><pre><code>微服务（Microservice）是一种架构风格，微服务架构模式就是将整个Web应用组织为一系列小的Web服务。
+这些小的Web服务可以独立地编译及部署，各个微服务之间是松耦合的，并通过各自暴露的API接口相互通讯。
+每个微服务仅关注于完成一件任务并很好地完成该任务。
+它们彼此相互协作，作为一个整体为用户提供功能，却可以独立地进行扩展。
+</code></pre><h3 id="2、微服务架构需要的功能或使用场景"><a href="#2、微服务架构需要的功能或使用场景" class="headerlink" title="2、微服务架构需要的功能或使用场景"></a>2、微服务架构需要的功能或使用场景</h3><pre><code>1：把整个系统根据业务拆分成几个子系统。
+
+2：每个子系统可以部署多个应用，多个应用之间使用负载均衡。
+
+3：需要一个服务注册中心，所有的服务都在注册中心注册，负载均衡也是通过在注册中心注册的服务来使用一定策略来实现。
+
+4：所有的客户端都通过同一个网关地址访问后台的服务，通过路由配置，网关来判断一个URL请求由哪个服务处理。请求转发到服务上的时候也使用负载均衡。
+
+5：服务之间有时候也需要相互访问。例如有一个用户模块，其他服务在处理一些业务的时候，要获取用户服务的用户数据。
+
+6：需要一个断路器，及时处理服务调用时的超时和错误，防止由于其中一个服务的问题而导致整体系统的瘫痪。
+
+7：还需要一个监控功能，监控每个服务调用花费的时间等。
+</code></pre><h3 id="3、目前主流的微服务框架："><a href="#3、目前主流的微服务框架：" class="headerlink" title="3、目前主流的微服务框架："></a>3、目前主流的微服务框架：</h3><pre><code>Dubbo、 SpringCloud、thrift、Hessian等，目前用的大多数都是Dubbo，SpringCloud。
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/06/微服务学习/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://blog.rayboo.top/2019/03/10/RESTfulAPI/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1156,175 +1352,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/20/Mac开机自启动MySql/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.rayboo.top/2018/12/01/Idea常用插件/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ray Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/rayboo/rayboo/master/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ray's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/01/Idea常用插件/" itemprop="url">Idea常用插件</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-01T17:40:26+08:00">
-                2018-12-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/IDEA/" itemprop="url" rel="index">
-                    <span itemprop="name">IDEA</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/01/Idea常用插件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/01/Idea常用插件/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/12/01/Idea常用插件/" class="leancloud_visitors" data-flag-title="Idea常用插件">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h1><h2 id="Mac-安装"><a href="#Mac-安装" class="headerlink" title="Mac 安装"></a>Mac 安装</h2><p>打开IDEA：IntelliJ IDEA - Preferences… - Plugins</p>
-<h2 id="Windows-安装"><a href="#Windows-安装" class="headerlink" title="Windows 安装"></a>Windows 安装</h2><p>打开IDEA：File - Settings… - Plugins</p>
-<p>1、搜索选择自己想要安装的插件，下载安装并重启idea客户端即可。<br>2、已经安装的插件默认是启用（☑️）状态，如果要禁用某个插件，只用去除勾选，点击应用并保存，同样也需要重启生效。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/01/Idea常用插件/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
