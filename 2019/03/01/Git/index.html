@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="Ray&#39;s Blog">
 <meta property="og:description" content="Git初始化提交Git初始化提交本地代码到远程仓库 Git 全局设置:12git config --global user.name &amp;quot;ray&amp;quot;git config --global user.email &amp;quot;rayboo@qq.com&amp;quot;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-13T10:45:02.058Z">
+<meta property="og:updated_time" content="2019-07-13T11:09:30.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 初始化提交">
 <meta name="twitter:description" content="Git初始化提交Git初始化提交本地代码到远程仓库 Git 全局设置:12git config --global user.name &amp;quot;ray&amp;quot;git config --global user.email &amp;quot;rayboo@qq.com&amp;quot;">
@@ -452,7 +452,14 @@
 <h3 id="已有仓库"><a href="#已有仓库" class="headerlink" title="已有仓库?"></a>已有仓库?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd existing_git_repo</span><br><span class="line">git remote add origin #远程仓库地址</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 <h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><h3 id="从远程库同步"><a href="#从远程库同步" class="headerlink" title="从远程库同步"></a>从远程库同步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
 <h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-<h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a></p>
+<h2 id="Git远程仓库地址修改"><a href="#Git远程仓库地址修改" class="headerlink" title="Git远程仓库地址修改"></a>Git远程仓库地址修改</h2><p>方法有三种：</p>
+<p>1.修改命令</p>
+<pre><code>git remote origin set-url [url]
+</code></pre><p>2.先删后加</p>
+<pre><code>git remote rm origin
+git remote add origin [url]
+</code></pre><p>3.直接修改config文件</p>
+<h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a><br><a href="https://www.cnblogs.com/kuyuecs/p/8328060.html" target="_blank" rel="noopener">Git远程仓库管理</a></p>
 
       
     </div>
@@ -688,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git初始化提交"><span class="nav-number">1.</span> <span class="nav-text">Git初始化提交</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-全局设置"><span class="nav-number">1.1.</span> <span class="nav-text">Git 全局设置:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-git-仓库"><span class="nav-number">1.2.</span> <span class="nav-text">创建 git 仓库:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已有仓库"><span class="nav-number">1.3.</span> <span class="nav-text">已有仓库?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git常用命令"><span class="nav-number">2.</span> <span class="nav-text">Git常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从远程库同步"><span class="nav-number">2.1.</span> <span class="nav-text">从远程库同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交代码"><span class="nav-number">2.2.</span> <span class="nav-text">提交代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关文档"><span class="nav-number">3.</span> <span class="nav-text">相关文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git初始化提交"><span class="nav-number">1.</span> <span class="nav-text">Git初始化提交</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-全局设置"><span class="nav-number">1.1.</span> <span class="nav-text">Git 全局设置:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-git-仓库"><span class="nav-number">1.2.</span> <span class="nav-text">创建 git 仓库:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已有仓库"><span class="nav-number">1.3.</span> <span class="nav-text">已有仓库?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git常用命令"><span class="nav-number">2.</span> <span class="nav-text">Git常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从远程库同步"><span class="nav-number">2.1.</span> <span class="nav-text">从远程库同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交代码"><span class="nav-number">2.2.</span> <span class="nav-text">提交代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git远程仓库地址修改"><span class="nav-number">3.</span> <span class="nav-text">Git远程仓库地址修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关文档"><span class="nav-number">4.</span> <span class="nav-text">相关文档</span></a></li></ol></div>
             
 
           </div>
