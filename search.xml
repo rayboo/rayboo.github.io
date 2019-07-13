@@ -25,8 +25,6 @@
             
             <tag> SpringCloud </tag>
             
-            <tag> Spring Cloud Config </tag>
-            
         </tags>
       
     </entry>
@@ -53,8 +51,6 @@
             <tag> 微服务 </tag>
             
             <tag> SpringCloud </tag>
-            
-            <tag> Eureka </tag>
             
         </tags>
       
