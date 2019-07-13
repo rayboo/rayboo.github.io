@@ -21,6 +21,8 @@
       
         <tags>
             
+            <tag> Java </tag>
+            
             <tag> 微服务 </tag>
             
             <tag> SpringCloud </tag>
@@ -47,6 +49,8 @@
       
       
         <tags>
+            
+            <tag> Java </tag>
             
             <tag> 微服务 </tag>
             
@@ -244,9 +248,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
